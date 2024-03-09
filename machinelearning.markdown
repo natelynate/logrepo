@@ -7,11 +7,11 @@ published: True
 ---
 Hello, machine learning
 
-{{% for post in site.category.projects %}
+{{% for post in site.category.projects %}}
  <li>post.title</li>
-{% endfor %}}
+{{% endfor %}}
 
 
-{{% for post in site.category.machine_learning %}
+{{% for post in site.category.machine_learning %}}
  <li>post.title</li>
-{% endfor %}}
+{% endfor %}
