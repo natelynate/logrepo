@@ -1,23 +1,8 @@
 ---
 layout: post
-title:  "Test Page"
+title:  "project logs"
 date:   2024-02-12 19:15:16 +0900
-categories: jekyll update
+categories: projects
 ---
 
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-[I'm an inline-style link](https://www.google.com)
-
-![alt text](/redman.png "Logo Title Text 1")
-
-<img src="../redman.png" alt="drawing" width="200"/>
-
-![alt text](/asset/images/basic/redman.png "logo")
-
-![alt text]({{BASE_PATH}}/asset/images/basic/redman.png "logo")
+Hello, World!
