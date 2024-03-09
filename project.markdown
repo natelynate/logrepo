@@ -5,4 +5,4 @@ permalink: /projects/
 published: True
 food: potato
 ---
-{{page.food}}
+
