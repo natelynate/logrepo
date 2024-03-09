@@ -11,3 +11,17 @@ Hello, World!
 {{% for post in site.category.projects %}}
  <li>post.title</li>
 {{% endfor %}}
+
+
+{{% for post in site.category.machine_learning %}
+ <li>post.title</li>
+{% endfor %}}
+
+{% for post in site.category.projects %}
+ <li>post.title</li>
+{% endfor %}
+
+
+{% for post in site.category.machine_learning %}
+ <li>post.title</li>
+{% endfor %}
