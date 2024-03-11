@@ -8,7 +8,7 @@ permalink: /study/
 <ul>
 {% for post in site.categories.study %}
     {% if post.tags contains "machinelearning" %}
-        <li><a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a></li>
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>
@@ -17,7 +17,7 @@ permalink: /study/
 <ul>
 {% for post in site.categories.study %}
     {% if post.tags contains "codingtest" %}
-        <li><a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a></li>
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
     {% endif %}
 {% endfor %}
 </ul>
