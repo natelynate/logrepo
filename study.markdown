@@ -4,8 +4,8 @@ title: ~/study
 permalink: /study/
 ---
 
-{% for post in site.category.study %}
+{% for post in site.categories.study %}
     <ul>
-        <li>{{ post[1].title }}</li>
+        <li>{{ post.title }}</li>
     </ul>
 {% endfor %}
