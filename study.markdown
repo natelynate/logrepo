@@ -4,8 +4,11 @@ title: ~/study
 permalink: /study/
 ---
 
+<h1>Machine Learning</h1>
 <ul>
 {% for post in site.categories.study %}
-        <li>{{ post.title }}</li>
+    {% if post.tags contain "machinelearning" %}
+        <li><a href="{{ post.url | prepend: site.baseurl}}"></a>{{ post.title }}</li>
+    {% endif %}
 {% endfor %}
 </ul>
