@@ -3,5 +3,5 @@ layout: post
 title:  "[Programmers Lv.2] clothing"
 date:   2024-03-01 19:15:16 +0900
 categories: study
-tags: codingtest, programmers, hash, number_of_cases
+tags: codingtest programmers hash number_of_cases
 ---
