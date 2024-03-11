@@ -5,5 +5,7 @@ permalink: /study/
 ---
 
 {% for post in site.category.study %}
-    <li>{{post.title}}</li>
+    <ul>
+        <li>{{ post.title }}</li>
+    </ul>
 {% endfor %}
