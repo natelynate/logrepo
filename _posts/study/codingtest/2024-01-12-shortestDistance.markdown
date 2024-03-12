@@ -141,7 +141,7 @@ def bellman(N, M, dist_array):
             # B까지 가는 기존 비용 vs (A->B 경로를 통해 B로 가는 비용 비교)
             if dist_array[A] != 1e99 and dist_array[B] > dist_array[A] + C:
                 dist_array[B] = dist_array[A] + C
-                if i == N - 1: # 만약 마지막 노드를 점검 중임에도 값 갱신이 발생한다면 음수 cycle이 존재하므로 최소결과를 찾을 수 없음. 
+                if i == N: # 만약 마지막 노드를 점검 중임에도 값 갱신이 발생한다면 음수 cycle이 존재하므로 최소결과를 찾을 수 없음. 
                     return -1
     return dist_array 
 ```
