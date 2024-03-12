@@ -5,3 +5,32 @@ date:   2024-03-01 19:15:16 +0900
 categories: study
 tags: codingtest programmers hash number_of_cases
 ---
+
+
+그래서 특정 파츠의 옷을 입지 않아도 되는 조건인데 이를 역으로 생각해서 투명한 옷을 입는다고 생각함. 즉 모든 파츠에 대해 문제에서 주어진 것보다
++1 가짓수가 더 있다고 생각하면 된다. 그렇게 하면 일반적인 곱의법칙으로 문제를 푼 후, 모든 파츠에서 투명옷을 입는 경우의 수(1개)를 뺀 것을 
+반환하면 간단하게 계산할 수 있다. 
+```
+# https://school.programmers.co.kr/learn/courses/30/lessons/42578
+# Level 2
+# Hash
+# combinations로 처음에 해봤는데 시간초과 
+
+
+
+def solution(clothes):
+    wardrobe = {}
+    for clothing, clothing_type in clothes:
+        if clothing_type not in wardrobe:
+            wardrobe[clothing_type] = 1
+        else:
+            wardrobe[clothing_type] += 1
+    answer = 1
+    for i in wardrobe:
+        answer *= wardrobe[i]+1
+    return answer-1
+
+if __name__ == '__main__':
+    print(solution([["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"], ['red_trouser', "pants"]]))
+
+```
