@@ -8,6 +8,9 @@ tags: codingtest, theory, algorithm
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
 <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
 
+$$O^2$$
+\\O^2\\
+
 최단거리를 구하기 위해 활용될 수 있는 알고리즘 3개를 설명한다. 
 1. 다익스트라 
 2. 플로이드-워셜
