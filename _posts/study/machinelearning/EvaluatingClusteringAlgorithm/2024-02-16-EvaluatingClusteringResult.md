@@ -452,7 +452,7 @@ silhouette_score(X, kmeans.fit_predict(X)), silhouette_score(X, gmm.fit_predict(
 
 클러스터링 결과의 밀집성을 평가하는데 사용된다. 
 
-$\huge \sqrt{\frac{{\Sigma}_i{\Sigma}_{x \in C_i} \parallel (x-c_i) \parallel^2}{{\Sigma_{j=i...p}} (n_{ij} - 1)}}$
+$$ \sqrt{\frac{{\Sigma}_i{\Sigma}_{x \in C_i} \parallel (x-c_i) \parallel^2}{{\Sigma_{j=i...p}} (n_{ij} - 1)}}$$
 
 Where 
 

@@ -32,5 +32,4 @@ def solution(clothes):
 
 if __name__ == '__main__':
     print(solution([["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"], ['red_trouser', "pants"]]))
-
 ```
