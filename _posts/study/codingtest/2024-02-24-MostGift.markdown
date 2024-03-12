@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "[Programmers Lv.1] 가장 많이 받은 선물"
+date:   2024-02-24 19:15:16 +0900
+categories: study
+tags: codingtest heapq
+---
+
+https://school.programmers.co.kr/learn/courses/30/lessons/258712
+time: ~30min
+level:1
+
+```python
+def solution(friends, gifts):
+    # 인덱스-이름 간 참조를 위한 딕셔너리 생성
+    indices = [i for i in range(len(friends))]
+    name_idx_pair = {name:idx for name, idx in zip(friends, indices)}
+    max_gift = [0] * len(friends) # 각자 받는 선물량을 저장하는 리스트
+    
+    gift_records = [[0] * len(friends) for _ in range(len(friends))]
+    
+    # iterate through all gift transanctions
+    for record in gifts: 
+        sender, receiver = record.split(" ")
+        sender_idx, receiver_idx = name_idx_pair[sender], name_idx_pair[receiver]
+        gift_records[sender_idx][receiver_idx] += 1
+    
+    # 선물을 보낼 수 있는 모든 이름쌍을 확인 후 선물량 예측 
+    for a in range(len(friends)):
+        for b in range(a+1, len(friends)):
+            if gift_records[a][b] == gift_records[b][a]:
+                # 주고받은 선물 개수가 동일하거나 서로 없는 경우(0==0) 선물지수 계산
+                a_gift_coef = sum(gift_records[a]) - sum([row[a] for row in gift_records])
+                b_gift_coef = sum(gift_records[b]) - sum([row[b] for row in gift_records])
+                if a_gift_coef > b_gift_coef:
+                    max_gift[a] += 1 
+                elif a_gift_coef < b_gift_coef:
+                    max_gift[b] += 1
+                # 선물지수가 동일한 경우 선물교환이 이루어지지 않음
+            elif gift_records[a][b] > gift_records[b][a]:
+                max_gift[a] += 1  
+            elif gift_records[a][b] < gift_records[b][a]:
+                max_gift[b] += 1
+    return max(max_gift)    
+```            
+        
+    
+                                                    
+    

@@ -83,8 +83,8 @@ plt.legend()
 plt.show()
 ```
 3개 데이터셋의 분포를 시각화하면 다음과 같다.  
-![png](_posts\study\machinelearning\EvaluatingClusteringAlgorithm\image-1.png)
 
+![Image Alt 텍스트]({{"/assets/images/image-1.png"| relative_url}})
 
 `라벨링이 없는` 클러스터링 결과를 가지고 분류 성능을 알려면:
 
@@ -127,7 +127,7 @@ ${\Sigma}x_i$의 영향력이 떨어지고, 홉킨스 통계량은 1에 가까�
 ${\Sigma}y_i << {\Sigma}x_i$ 의 경우면 랜덤생성했을 때 오히려 더 밀도가 높다는 뜻인데... 이러면 홉킨스 통계량은 0에 가까워지고,
 아마도 똑같이 클러스터 존재 가능성은 낮아질 것.
 
-<font color='yellow'> 요약하면 홉킨스통계량은 0 ~ 0.5에 가까우면 클러스터가 없다는 것이고, 1에 가까울 수록 클러스터 존재 가능성이 올라간다. </font>
+<font color='red'> 요약하면 홉킨스통계량은 0 ~ 0.5에 가까우면 클러스터가 없다는 것이고, 1에 가까울 수록 클러스터 존재 가능성이 올라간다. </font>
  
 
 
@@ -220,7 +220,7 @@ print(f"Hopkins Statistics is: {hopkins}")
 
 랜덤한 데이터셋에 홉킨스 통계치를 계산한 결과로 0.53이 나온다. 
 
-즉 클러스터링을 적용하기 <font color=yellow> 이전에 </font> 클러스터의 존재 유무를 판별할 수 있다.
+즉 클러스터링을 적용하기 <font color=red> 이전에 </font> 클러스터의 존재 유무를 판별할 수 있다.
 
 =========================================================================================================================
 2. `클러스터 개수 k 측정`: 클러스터 존재유무를 파악한 후, 실제 군집 수를 찾은 후 이에 기반하여 클러스터링 결과의 질을 판별할 수 있다.
@@ -452,7 +452,6 @@ silhouette_score(X, kmeans.fit_predict(X)), silhouette_score(X, gmm.fit_predict(
 
 클러스터링 결과의 밀집성을 평가하는데 사용된다. 
 
-$$ \sqrt{\frac{{\Sigma}_i{\Sigma}_{x \in C_i} \parallel (x-c_i) \parallel^2}{{\Sigma_{j=i...p}} (n_{ij} - 1)}}$$
 
 Where 
 

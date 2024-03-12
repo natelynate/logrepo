@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "[Programmers Lv.1] Marathon"
+date:   2024-02-27 19:15:16 +0900
+categories: study
+tags: codingtest programmers hash
+---
+
+```python
+from collections import Counter
+
+def solution(participant, completion):
+    participant = Counter(participant)
+    completion = Counter(completion)
+    
+    for key in participant:
+        if participant[key] > completion[key]:
+            return key
+        
+if __name__ == '__main__':
+    participant = ["mislav", "stanko", "mislav", "ana"]
+    completion = ["stanko", "ana", "mislav"]
+    print(solution(participant, completion)) 
+```
