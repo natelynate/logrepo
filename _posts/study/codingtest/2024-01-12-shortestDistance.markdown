@@ -6,9 +6,6 @@ categories: study
 tags: codingtest, theory, algorithm
 ---
 
-$$O^2$$
-
-
 최단거리를 구하기 위해 활용될 수 있는 알고리즘 3개를 설명한다. 
 1. 다익스트라 
 2. 플로이드-워셜
@@ -27,7 +24,7 @@ $$O^2$$
 heapq를 쓰면 손쉽게 사용할 수 있다.
 
 대략적인 코드 예시는 다음과 같다. 
-```
+```python
 import heapq
 
 n = 10
@@ -72,7 +69,7 @@ def dijkstra(start):
 
 노드 a에서 c로 가는 최단거리가 graph[a][c] 라고 했을 때, a와 c 사이에 존재하는 모든 노드 b에 대해서 min(a, b) + min(b, c)를 합한 것이 곧 
 a -> c 의 최소 거리가 된다는 논리이다. 가능한 모든 연결의 경우의 수를 탐색하기 때문에 자연스럽게 시간 복잡도 $O(N^3)$ 이다.
-```
+```python
 # Floyd-Warshall Algorithm
 
 INF = int(1e9)
@@ -126,7 +123,7 @@ Weighted-Directed Graph에서 임의의 노드에서 다른 모든 노드들 간
 2. 만약 음수 간선 순환이 발생하는지 체크하고 싶다면 3번의 과정을 한 번 더 수행한다.
     → 이 때 최단 거리 테이블이 갱신된다면 음수 간선 순환이 존재하는 것이다.
 
-```
+```python
 # 1번 노드에서 시작한다고 가정했을 때
 
 N, M = map(int, input().split())

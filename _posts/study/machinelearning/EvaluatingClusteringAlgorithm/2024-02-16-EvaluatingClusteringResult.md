@@ -37,6 +37,7 @@ import random
 import math
 ```
 
+테스트로 정규분포에서 샘플링한 100개짜리 데이터셋 2개, 그리고 완전히 랜덤 추출한 동일 크기의 랜덤 데이터셋을 만들었다.
 
 ```python
 # Generate Random Clustering Results
@@ -57,7 +58,6 @@ for cls in range(2):
 
 ```python
 # Generate Random points
-
 rng_result = pd.DataFrame(columns=['class', 'x', 'y'])
 
 for cls in range(2):
@@ -73,7 +73,6 @@ for cls in range(2):
     rng_result = pd.concat([rng_result, temp], axis=0)
 ```
 
-
 ```python
 plt.figure()
 for cls in range(2):
@@ -83,11 +82,8 @@ plt.scatter(rng_result['x'], rng_result['y'], label='random', alpha=0.5)
 plt.legend()
 plt.show()
 ```
-
-
-    
-![png](EvaluatingClusteringResult_files/EvaluatingClusteringResult_3_0.png)
-    
+3개 데이터셋의 분포를 시각화하면 다음과 같다.  
+![png](_posts\study\machinelearning\EvaluatingClusteringAlgorithm\image-1.png)
 
 
 `라벨링이 없는` 클러스터링 결과를 가지고 분류 성능을 알려면:
@@ -110,7 +106,7 @@ plt.show()
 
 혹은 Hopkins Statistics로 공간상 데이터의 랜덤성을 측정할 수 있다. 
 
-![image.png](EvaluatingClusteringResult_files/image.png)
+![image.png](_posts\study\machinelearning\EvaluatingClusteringAlgorithm\image-3.png)
 
 데이터셋에서 임의의 n개의 포인트를 샘플링한 후, 각 포인트($n_i$)마다 가장 가까운 이웃한 다른 포인트와의 거리를 $y_i$라고 하고, 
 샘플이 취할 수 있는 값 내에서 아예 임의의 포인트를 똑같이 n개 랜덤생성한 후 똑같이 가장 가까운 이웃과의 거리를 $x_i$라고 하자. 
@@ -273,9 +269,6 @@ class_result_labeled['kmeans_pred'] = kmeans_labels
 class_result_labeled.head()
 ```
 
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -346,9 +339,6 @@ class_result_labeled.head()
 </table>
 </div>
 
-
-
-
 ```python
 from sklearn.metrics import accuracy_score
 
@@ -372,6 +362,10 @@ print(correct)
 ### Silhouette Coefficient (1/4)
 
 실루엣 계수는 개별 포인트 p에 대해서 계산된다. 
+
+![Alt text](_posts\study\machinelearning\EvaluatingClusteringAlgorithm\image-2.png)
+
+
 
 <font color=green> a = 포인트 p가 속한 군집의 다른 포인트 p' 사이의 평균 거리
 
