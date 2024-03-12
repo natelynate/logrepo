@@ -5,11 +5,11 @@ date:   2024-03-03 19:15:16 +0900
 categories: study
 tags: codingtest programmers trie
 ---
-https://school.programmers.co.kr/learn/courses/30/lessons/42577
-Level 2
-Nested Dictionary로 구현
-초반에 node와 trie는 포인터 역할을 함. trie는 매번 trie의 최상단을 가리키고, node는 갱신될 때마다 단계적으로 내려감.
-초기에 node = trie를 통해 두 개의 포인터 위치를 유지하는 방식을 택함. 
+https://school.programmers.co.kr/learn/courses/30/lessons/42577  
+Level 2  
+Nested Dictionary로 구현  
+초반에 node와 trie는 포인터 역할을 함. trie는 매번 trie의 최상단을 가리키고, node는 갱신될 때마다 단계적으로 내려감.  
+초기에 node = trie를 통해 두 개의 포인터 위치를 유지하는 방식을 택함.   
 
 ```
 def solution(phone_book):
