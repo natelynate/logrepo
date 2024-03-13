@@ -84,7 +84,7 @@ plt.show()
 ```
 3개 데이터셋의 분포를 시각화하면 다음과 같다.  
 
-![Image Alt 텍스트]({{"/assets/images/image-1.png"| relative_url}})
+![absolute]({{"/assets/images/image-1.png"| absolute_url }})
 
 `라벨링이 없는` 클러스터링 결과를 가지고 분류 성능을 알려면:
 
@@ -106,10 +106,10 @@ plt.show()
 
 혹은 Hopkins Statistics로 공간상 데이터의 랜덤성을 측정할 수 있다. 
 
-![relative]({{"_posts/study/machinelearning/EvaluatingClusteringAlgorithm/image-3.png" | relative_url}})
+![relative]({{"/assets/images/2024-02-14-NaiveBayesClassifier_1.png" | relative_url}})
 
+![absolute]({{"/assets/images/2024-02-14-NaiveBayesClassifier_1.png" | absolute_url}})
 
-![absolute]({{"_posts/study/machinelearning/EvaluatingClusteringAlgorithm/image-3.png" | absolute_url}})
 
 데이터셋에서 임의의 n개의 포인트를 샘플링한 후, 각 포인트($n_i$)마다 가장 가까운 이웃한 다른 포인트와의 거리를 $y_i$라고 하고, 
 샘플이 취할 수 있는 값 내에서 아예 임의의 포인트를 똑같이 n개 랜덤생성한 후 똑같이 가장 가까운 이웃과의 거리를 $x_i$라고 하자. 
