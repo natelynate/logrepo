@@ -449,7 +449,7 @@ silhouette_score(X, kmeans.fit_predict(X)), silhouette_score(X, gmm.fit_predict(
 
 ============================================================================================================================================
 
-평균제곱근 표준편차 Root Mean Squared Standard Deviation RMSSTD (2/4)
+### 평균제곱근 표준편차 Root Mean Squared Standard Deviation RMSSTD (2/4)
 
 클러스터링 결과의 밀집성을 평가하는데 사용된다. 
 
@@ -484,7 +484,7 @@ ___
 https://www.researchgate.net/publication/267369576_Comparison_of_Clustering_Techniques_for_Cluster_Analysis
 
 ===============================================================================================================
-R Square(3/4)
+### R Square(3/4)
 
 군집 사이의 차이 정도를 측정할 수 있다. 
 
