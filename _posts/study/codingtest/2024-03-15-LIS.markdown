@@ -1,0 +1,57 @@
+---
+layout: post
+title:  Longest Incremental Subsequence 최장 증가 부분수열 알고리즘
+date:   2024-03-15 19:15:16 +0900
+categories: study
+tags: codingtest dynamicprogramming
+---
+
+Longest Incremental Sequence를 구하는 알고리즘의 핵심은 간단한 발상에서부터 시작된다.  
+
+바로 부분수열에 새로운 값을 더할 때, 가장 직전값보다 큰 값들에서 제일 작은 값을 취해야 가장 긴 부분수열을 최종적으로 완성할 수 있다는 발상이다.
+
+아주 간단하게 표현하자면 최대한 찔끔찔끔 올려야 가장 긴 부분수열이 완성될 승산이 높다는 거다. 
+
+
+```python
+# https://www.acmicpc.net/problem/11053
+# 3/1/2024
+# LIS
+# array의 원소 n개에 대해 등재조건 미충족시 logN짜리 binarysearch 알고리즘을 1번씩 돌리므로 O(NlogN)의 시간복잡도
+
+import bisect
+
+def find_lis(n:int, array:int):
+    minvalue_arr = [array[0]] # 길이가 i인 LIS의 끝점의 최솟값들
+    index_records = [] # min_value_array의 index 조작 기록
+    for idx in range(n):
+        if array[idx] > minvalue_arr[-1]: # if the next element is bigger than the previous element, subsequence can be extended by 1 unit
+            minvalue_arr.append(array[idx])
+            index_records.append(len(minvalue_arr)-1) # 
+        else: # if the minvalue array cannot be extended, use binarysearch to update the lower element
+            new_lower = bisect.bisect_left(minvalue_arr, array[idx])           
+            minvalue_arr[new_lower] = array[idx]
+            index_records.append(new_lower)
+    return minvalue_arr, index_records
+
+def reconstruct_lis(minvalue_array, index_records):
+    lis_length = len(minvalue_array)
+    lis = []
+    for i in range(len(array)-1, -1, -1): # 뒤에서부터 거꾸로 확인
+        if index_records[i] == lis_length-1: # 인덱스 조작 기록에서 각 LIS 자릿수당 가장 마지막으로 할당된 index의 원소가 LIS의 뒤에서 i번째원소
+            lis.append(array[i])
+            lis_length -= 1
+    return lis[::-1]
+
+if __name__ == '__main__':
+    n = int(input())
+    array = list(map(int, input().split()))
+    minvalue_array, index_records = find_lis(n, array)
+    print(len(minvalue_array), reconstruct_lis(minvalue_array, index_records))
+```
+
+이렇게 하면 minvalue_arr의 최대 길이가 곧 LIS의 길이가 된다. 만약 단순히 길이를 구하는 것을 넘어서 가장 긴 LIS를 재구하고자 할 경우, 별도의 리스트를 선언해야 한다. 
+
+
+
+

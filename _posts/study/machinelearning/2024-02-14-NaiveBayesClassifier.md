@@ -57,5 +57,5 @@ Naive Bayes는 Supervised 이므로 라벨링된 샘플데이터셋이 있으므
 
 이를 확률그래프 모형으로 표기하면:
 
-![image.png]({{"/assets/images/2024-02-14-NaiveBayesClassifier_1.png/"|  relative_url}})
+![two_models]({{"/assets/images/2024-02-14-NaiveBayesClassifier_1.png/" |  relative_url}})
 
