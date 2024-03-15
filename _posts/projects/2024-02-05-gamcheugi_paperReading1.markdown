@@ -16,11 +16,11 @@ tags: gamcheugi paper
 
 3. <b><font color=red>Appearance-based Model</font></b>은 상용 웹캠 장비로 촬영한 영상을 기반으로 Gaze Vector를 추출한 후 이를 응시 지점과 매핑하는 방식을 취합니다. 매핑 함수는 본질적으로 Regression함수이고, 훈련시키기 위해 많은 샘플이 필요하다는 것과, 고차원 이미지 데이터를 저차원으로 매핑하는 회귀 함수의 성능이 1,2번에 비해 좋지 않다는 단점이 있습니다. 
 
-![alt text]({{"/assets/images/2024-02-15-gamcheugi_PaperReview1.png" | relative_url}})
+![alt text]({{"/assets/images/2024-02-15-gamcheugi_PaperReview1.PNG" | relative_url}})
 
 3번의 경우, Feature Extraction을 통해 확보한 Feature를 가지고 별도의 Regression 모델을 훈련시키는 것보다는 최근 딥러닝을 이용해 PoG나 혹은 시선 벡터를 바로 도출해내는 방식이 시도되고 있고, 좋은 성과를 거두고 있습니다. 
 
-![alt text]({{"/assets/images/2024-02-15-gamcheugi_PaperReview2.png" | relative_url}})
+![alt text]({{"/assets/images/2024-02-15-gamcheugi_PaperReview2.PNG" | relative_url}})
 
 CNN 모델이 처음 사용되었을 때, 대부분의 기존 appearance-based models보다 뛰어난 성능을 보였습니다. (Zhang et al)
 
@@ -32,7 +32,7 @@ CNN 모델의 경우 고차원 이미지 데이터에서 자동으로 feature를
 
 또한 최초의 CNN 모델에서는 단일한 눈 image를 기반으로 수행되었으나, left eye와 right eye에 각각 feature extraction을 수행한 후 이를 concatenate하여 다음 Fully-Connected 레이어의 인풋으로 활용하는 경우도 제안되었습니다. 
 
-![alt text]({{"/assets/images/2024-02-15-gamcheugi_PaperReview3.png" | relative_url}})
+![alt text]({{"/assets/images/2024-02-15-gamcheugi_PaperReview3.PNG" | relative_url}})
 
 그림에서는 총 4개의 source로부터 추출한 deep feature를 입력으로 활용하는 경우의 예시입니다. 좌안 + 우안 + 전체 얼굴 이미지 + 얼굴이 위치한 Grid 좌표로 중복을 감수하더라도 (좌안+우안은 전체 얼굴 이미지에 이미 포함됨) 들어가는 경우인데, 일종의 랜드마크 격인 논문인 "Gaze Tracking for Everyone" 에서 사용된 조합이기도 합니다. 이는 눈 이미지만 단독으로 사용한 경우보다 좋은 결과를 보였습니다. 
 

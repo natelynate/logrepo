@@ -15,7 +15,6 @@ Longest Incremental Sequence를 구하는 알고리즘의 핵심은 간단한 �
 
 ```python
 # https://www.acmicpc.net/problem/11053
-# 3/1/2024
 # LIS
 # array의 원소 n개에 대해 등재조건 미충족시 logN짜리 binarysearch 알고리즘을 1번씩 돌리므로 O(NlogN)의 시간복잡도
 
