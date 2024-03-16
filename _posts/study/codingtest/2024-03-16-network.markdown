@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "[Programmers Lv.3] 네트워크"
+date:   2024-03-16 19:15:16 +0900
+categories: study
+tags: codingtest, bfs
+---
+
+https://school.programmers.co.kr/learn/courses/30/lessons/43162
+
+레벨 3이라고 표기는 되어 있는데 체감 난이도는 1 정도 되는 것 같다. BFS로 간단하게 여유있게 풀었고, 어쩌면 deque를 쓰지 않았어도 풀렸을 것 같다. 
+
+```python
+
+from collections import deque
+
+def solution(n, computers):
+    visited = [False] * (n) # visited matrix
+    queue = deque([])
+    answer = 0
+    for computer in range(n): # 0, 1, 2
+        if not visited[computer]: 
+            answer += 1 
+            visited[computer] = True
+            queue.append(computer)
+            while queue:
+                next_computer = queue.popleft()
+                for adj_idx, adj_computer in enumerate(computers[next_computer]):
+                    if adj_idx == next_computer: # 자기 자신은 제외
+                        continue
+                    if adj_computer == 1 and not visited[adj_idx]:
+                        queue.append(adj_idx)
+                        visited[adj_idx] = True
+    return answer
+```
