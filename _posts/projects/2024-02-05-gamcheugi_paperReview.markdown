@@ -5,6 +5,7 @@ date:   2024-02-05 19:15:16 +0900
 categories: projects
 tags: gamcheugi paper
 ---
+원본 Link: https://arxiv.org/abs/2104.12668
 
 본 포스트는 Appearance-based Gaze Estimation With Deep Learning: A Review and Benchmark(2021) 논문의 내용을 간략히 정리한 내용입니다. 
 
