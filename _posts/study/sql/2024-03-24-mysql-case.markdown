@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  CASE Syntax in MySQL
+title:  "CASE Syntax in MySQL"
 date:   2024-03-24 19:15:16 +0900
 categories: study
 tags: sql
