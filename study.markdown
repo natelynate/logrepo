@@ -21,3 +21,12 @@ permalink: /study/
     {% endif %}
 {% endfor %}
 </ul>
+
+<h1>SQL</h1>
+<ul>
+{% for post in site.categories.study %}
+    {% if post.tags contains "sql" %}
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
