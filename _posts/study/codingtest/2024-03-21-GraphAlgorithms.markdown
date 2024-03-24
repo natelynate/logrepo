@@ -15,11 +15,11 @@ tags: codingtest graph
 
 그래프의 부분집합이 어떤 의미인지 알기 위해 다음 그림을 보자. 
 
-![two_models]({{"/assets/images/2024-03-21-GraphAlgorithm_1.PNG/" |  relative_url}})
+![two_models]({{"/assets/images/2024-03-21-GraphAlgorithm_1.PNG" |  relative_url}})
 
 9개의 노드가 있고 노드의 간선 정보들을 저렇게 리스트로 받았다고 가정하자. 연결 상태를 보면 이 그래프는 총 3개의 부분 그래프로 나눌 수 있다.
 
-![two_models]({{"/assets/images/2024-03-21-GraphAlgorithm_2.PNG/" |  relative_url}})
+![two_models]({{"/assets/images/2024-03-21-GraphAlgorithm_2.PNG" |  relative_url}})
 
 서로 간에 노드를 공유하지 않는 총 3개의 부분 그래프가 존재함을 알 수 있다. 부분 그래프의 수를 알아야 할 필요는 여러가지가 있겠지만, 대표적으로 해당 그래프에서 전체 순회가 가능한지 여부를 빠르게 파악할 수 있다. 주어진 그래프에서 서로소 집합이 2개 이상인 순간부터 주어진 간선만으로는 절대로 모든 노드를 방문할 수 없기 때문이다. 
 
@@ -64,7 +64,7 @@ for i in range(E): # 각 노드별로
 결과를 출력하면 예상대로 나온다. 유의할 점은 parent는 각 노드가 가리키는 최상단 노드를 직접 저장하는게 아니기 때문에 실제로 특정 노드가 어느 그룹에 속하는지를 보려면 find()를 더 써서 recursive하게 직접 찾아야 한다.
 ```
 
-![two_models]({{"/assets/images/2024-03-21-GraphAlgorithm_3.PNG/" |  relative_url}})
+![two_models]({{"/assets/images/2024-03-21-GraphAlgorithm_3.PNG" |  relative_url}})
 
 
 
@@ -105,6 +105,6 @@ queue가 빈다는 것은 진입차수가 0인 노드가 현재 하나도 없다
 예시 그림을 첨부한다.
 
 
-![two_models]({{"/assets/images/2024-03-21-GraphAlgorithm_4.PNG/" |  relative_url}})
+![two_models]({{"/assets/images/2024-03-21-GraphAlgorithm_4.PNG" |  relative_url}})
 
 모든 노드의 진입차수가 1 이상인 것은 cycle이 있음을 의미한다.
