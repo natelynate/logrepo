@@ -5,6 +5,7 @@ date:   2024-03-24 19:15:16 +0900
 categories: thoughts
 tags: thoughts
 hidden: true
+published: false
 ---
 
 새벽 3시 무렵에, 발전하고자 하는 마음은 어딘가에서 정지하고 싶은 심리의 발로라는 말을 지나가듯이 보았다.
