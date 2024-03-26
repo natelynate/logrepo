@@ -8,7 +8,7 @@ tags: gamcheugi paper
 
 최초 프로젝트에서는 오픈소스 GazeTracking 라이브러리의 동공 좌표 추적 기능을 그대로 사용한 후, 사전에 계산해놓은 동공이동-화면비(ratio)를 이용해 프레임 단위로 현재 PoG를 측정하는 방법을 사용했었다.
 
-<a=link>오픈소스 라이브러리 분석글</>
+<a href="https://natelynate.github.io/logrepo/projects/2024/02/10/gamcheugi_GazeTrackingAnalysis.html">Link to the GazeTracking Analysis<>
 
 해당 방법에는 요약하자면 크게 두 가지 단점이 있었다.
 
