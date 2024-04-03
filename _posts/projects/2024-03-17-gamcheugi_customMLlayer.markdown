@@ -3,7 +3,7 @@ layout: post
 title:  "Custom ML Layer for Increasing GazeTracking Precision"
 date:   2024-03-17 19:15:16 +0900
 categories: projects
-tags: gamcheugi paper
+tags: gamcheugi paper computervision
 ---
 
 최초 프로젝트에서는 오픈소스 GazeTracking 라이브러리의 동공 좌표 추적 기능을 그대로 사용한 후, 사전에 계산해놓은 동공이동-화면비(ratio)를 이용해 프레임 단위로 현재 PoG를 측정하는 방법을 사용했었다.
