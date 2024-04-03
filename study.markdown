@@ -30,3 +30,12 @@ permalink: /study/
     {% endif %}
 {% endfor %}
 </ul>
+
+<h1>Python</h1>
+<ul>
+{% for post in site.categories.study %}
+    {% if post.tags contains "python" %}
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
