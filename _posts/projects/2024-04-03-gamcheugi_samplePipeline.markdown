@@ -8,7 +8,7 @@ tags: gamcheugi computervision
 
 <a href="https://www.frontiersin.org/articles/10.3389/frai.2021.796825/full">Link to the Paper</a>
 
-![alt text]({{"/assets/images/2024-04-04-facepipeline0.PNG" | relative_url}})
+![alt text]({{"/assets/images/2024-04-04-facepipeline0.png" | relative_url}})
 
 ![alt text]({{"/assets/images/2024-04-04-facepipeline1.PNG" | relative_url}})
 
