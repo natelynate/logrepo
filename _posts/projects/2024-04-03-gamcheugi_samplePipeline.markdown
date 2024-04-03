@@ -16,4 +16,3 @@ tags: gamcheugi computervision
 
 ![alt text]({{"/assets/images/2024-04-04-facepipeline3.PNG" | relative_url}})
 
-![alt text]({{"/assets/images/2024-04-04-facepipeline4.PNG" | relative_url}})
