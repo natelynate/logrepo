@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Dlib의 face landmark detection을 이용한 샘플 추출 파이프라인"
-date:   2024-04-04 19:15:16 +0900
+date:   2024-04-04 01:15:16 +0900
 categories: projects
 tags: gamcheugi computervision
 ---
