@@ -15,6 +15,8 @@ Eye Aspect Ratio는 눈의 가로 세로 비율을 말한다. 눈이 감기면 �
 <h4>EAR Formula</h4>  
 ![alt text]({{"/assets/images/2024-04-14-capture1.PNG" | relative_url}})  
 
+공식 및 예시 이미지 출처: https://medium.com/analytics-vidhya/eye-aspect-ratio-ear-and-drowsiness-detector-using-dlib-a0b2c292d706
+
 <h4>Samples</h4>  
 ![alt text]({{"/assets/images/2024-04-14-capture1.png" | relative_url}})  
 
