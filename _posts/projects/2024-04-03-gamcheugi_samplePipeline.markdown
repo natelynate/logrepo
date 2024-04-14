@@ -8,7 +8,7 @@ tags: gamcheugi computervision
 
 CNN 모델 기반 Appearance-Based 시선 추적 모델을 테스트해보기 위해서 가장 간단한 형태의 모델을 사용한 논문을 참고하였다. 
 <a href="https://www.frontiersin.org/articles/10.3389/frai.2021.796825/full">Link to the Paper</a>
-![alt text]({{"/assets/images/2024-04-04-CNN_test_ModelStructure.png" | relative_url}})
+![alt text]({{"/assets/images/2024-04-04-CNN_test_ModelStructure.PNG" | relative_url}})
 
 굉장히 간단한 구조인데, 두 개의 인풋 채널을 활용한 CNN모델이고, 사용자의 얼굴, 그리고 dlib을 통해 추출한 얼굴의 landmark coordinates를 받아 최종적으로 화면의 x,y의 좌표로 매핑하는 구조다. 
 
