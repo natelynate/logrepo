@@ -4,15 +4,19 @@ title: ~/about
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<div id="KOR 자기소개">
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+대학에서는 국문학, 그리고 뇌인지과학을 전공했습니다. 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+학부시절 대부분의 기간은 언어의 신경과학적 관점이라는 주제에 매몰되어 살았던 것 같습니다. 
+
+그러다가 어느 날 추상화와 변환이라는 주제에 단단히 꽂혀버린 후, 대학원 진학도 그만두고 
+
+현재는 추상화와 변환의 감각을 가장 잘 체화한다고 생각하는, 기계학습 분야에서 엔지니어로 일하기 위해 공부하고 있습니다. 
+
+한국어 자아와 영어 자아가 26년 동안 쉼없이 주도권 다툼을 해오고 있으며, 최근에는 공백 없이 8년 동안 한국에 산 영향으로 한국어 자아가 계속해서 연속 집권에 성공 중입니다.
+
+</div>
 
 
-[jekyll-organization]: https://github.com/jekyll
+
