@@ -36,7 +36,7 @@ Typical Softmax is:
 where is e is a vector of an arbitrary size. 
 
 In GPT, there's <i>additional Temperature constant</i>, $T$ - embedded at both the denominator and the numerator. This determines the pattern of dominance in the resulting vector. $T$ defaults to 1.0 and this would result in no modifications. 
-
+ 
 All logits in the vector are divided by T, and when T > 1.0, it effectively reduces the variance among the logits. 
 
 Below is a code snippet to demonstrate the effect of temperature:

@@ -12,12 +12,12 @@ Eye Aspect Ratio는 눈의 가로 세로 비율을 말한다. 눈이 감기면 �
 <h4>EAR Formula</h4>  
 ![alt text]({{"/assets/images/2024-04-14-capture0.PNG" | relative_url}})  
 
-<h4>EAR Formula</h4>  
-![alt text]({{"/assets/images/2024-04-14-capture1.PNG" | relative_url}})  
+
+![alt text]({{"/assets/images/2024-04-14-capture1.png" | relative_url}})  
 
 공식 및 예시 이미지 출처: https://medium.com/analytics-vidhya/eye-aspect-ratio-ear-and-drowsiness-detector-using-dlib-a0b2c292d706
 
 <h4>Samples</h4>  
-![alt text]({{"/assets/images/2024-04-14-capture1.png" | relative_url}})  
+![alt text]({{"/assets/images/2024-04-14-capture2.png" | relative_url}})  
 
 관찰해보면 통상적으로 눈을 뜨고 있는 경우 0.2~0.3 정도의 EAR이 나오고, 눈을 완전히 감은 경우 0.1이 나온다.
