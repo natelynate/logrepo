@@ -4,8 +4,6 @@ title:  "Understanding the Internal Structure of Transformers"
 date:   2024-04-14 19:15:16 +0900
 categories: study
 tags: theory machinelearning
-hidden: true
-published: false
 ---
 
 <h2> Transformer Structure</h2>
