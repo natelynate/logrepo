@@ -5,7 +5,7 @@ date:   2024-04-14 19:15:16 +0900
 categories: study
 tags: theory machinelearning
 ---
-
+<link rel="stylesheet" href="{{ '/assets/styles/styles.css/' | relative_url }}">
 <h2> Transformer Structure</h2>
 
 keywords: Embeedding, Attention, MLPs, Unembedding
@@ -27,7 +27,13 @@ If the next token is derived, then the appended sequence can again be fed to the
 
 Since the last vector is a probability vector, the sum of all elements will have to add up to 1.0. For this purpose, softmax function is used. 
 
-Typical Softmax is $\frac{e^x_i}{\Sigma{e^z_j}}$, where is e is a vector of an arbitrary size. 
+Typical Softmax is:
+<div id="mathjax"> 
+\[
+    \frac{e^x_i}{\Sigma{e^z_j}},
+\]
+</div>
+where is e is a vector of an arbitrary size. 
 
 In GPT, there's <i>additional Temperature constant</i>, $T$ - embedded at both the denominator and the numerator. This determines the pattern of dominance in the resulting vector. $T$ defaults to 1.0 and this would result in no modifications. 
 

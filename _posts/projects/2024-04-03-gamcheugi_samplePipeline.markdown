@@ -5,6 +5,7 @@ date:   2024-04-04 01:15:16 +0900
 categories: projects
 tags: gamcheugi computervision
 ---
+<link rel="stylesheet" href="{{ '/assets/styles/styles.css/' | relative_url }}">
 
 CNN 모델 기반 Appearance-Based 시선 추적 모델을 테스트해보기 위해서 가장 간단한 형태의 모델을 사용한 논문을 참고하였다. 
 <a href="https://www.frontiersin.org/articles/10.3389/frai.2021.796825/full">Link to the Paper</a>
