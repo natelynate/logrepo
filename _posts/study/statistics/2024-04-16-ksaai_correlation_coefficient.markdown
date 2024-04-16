@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  Chatterjee's ξ Correlation Coefficient
-date:   2024-04-14 13:15:16 +0900
+date:   2024-04-16 13:15:16 +0900
 categories: study
-tags: statistics
+tags: statistics dataanalysis
 ---
 
 The three most influential correlation coefficients are:
