@@ -10,7 +10,7 @@ tags: theory machinelearning
 
 keywords: Embeedding, Attention, MLPs, Unembedding
 
-![two_models]({{"/assets/images/2024-04-14-Transformers_0.PNG/" |  relative_url}})
+![two_models]({{"/assets/images/2024-04-14-Transformers_0.PNG" |  relative_url}})
 
 <h4>Overview</h4>
 The aim of transformer, in terms of its inputs and outputs, is when given a sequence of tokens as an input to derive a vector containing probable likelihoods of all tokens of being the of being the next token. 
@@ -59,7 +59,7 @@ soft_V = softmax(V)
 print("Softmax when T=1.0:", soft_V)
 print("Variance when T=1.0:", variance(soft_V))
 ```
-![outcome1]({{"/assets/images/2024-04-14-Transformers_code0.PNG/" |  relative_url}})
+![outcome1]({{"/assets/images/2024-04-14-Transformers_code0.PNG" |  relative_url}})
 
 ```python
 # Case when T = 2.0, variance is reduced
@@ -76,7 +76,7 @@ print("Softmax when T=2.0:", soft_V)
 print("Variance when T=2.0:", variance(soft_V))
 ```
 
-![outcome1]({{"/assets/images/2024-04-14-Transformers_code1.PNG/" |  relative_url}})
+![outcome1]({{"/assets/images/2024-04-14-Transformers_code1.PNG" |  relative_url}})
 
 ```python
 # Case when T = 0.5, variance is increased
@@ -93,7 +93,7 @@ print("Softmax when T=0.5:", soft_V)
 print("Variance when T=0.5:", variance(soft_V))
 ```
 
-![outcome1]({{"/assets/images/2024-04-14-Transformers_code2.PNG/" |  relative_url}})
+![outcome1]({{"/assets/images/2024-04-14-Transformers_code2.PNG" |  relative_url}})
 <br>
 <br>
 <br>

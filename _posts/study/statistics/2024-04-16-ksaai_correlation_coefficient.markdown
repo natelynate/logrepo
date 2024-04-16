@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  Chatterjee's ξ Correlation Coefficient
+title:  "Chatterjee's ξ Correlation Coefficient"
 date:   2024-04-16 13:15:16 +0900
 categories: study
 tags: statistics dataanalysis
 ---
-<link rel="stylesheet" href="{{ '/assets/styles/styles.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/styles/styles.css/' | relative_url }}">
 
 
 The three most influential correlation coefficients are:
@@ -66,19 +66,19 @@ the relationship is <font color='red'> not monotonic </font>, and <font color='r
 
 The generalized formulas are as follows:
 
-<div id='mathjax'>
+<!-- <div id="mathjax"> -->
 \[
-    \xi(X, Y) = 1 - \frac{3\Sigma^{n-1}_{i-1}|r_{i+1}-r_i}{n^2 - 1}  
+    \xi(X, Y) = 1 - \frac{3\Sigma^{n-1}_{i-1}|r_{i+1}-r_i|}{n^2 - 1}  
 \]
-</div>
+<!-- </div> -->
 <br>
 <br>
 
-<div id='mathjax'>
+<!-- <div id="mathjax"> -->
 \[
-    \xi(X, Y) = 1 - \frac{n\Sigma^{n-1}_{i-1}|r_{i+1}-r_i}{2\Sigma^{n}_{i=1}l_i(n-l_i)}
+    \xi(X, Y) = 1 - \frac{n\Sigma^{n-1}_{i-1}|r_{i+1}-r_i|}{2\Sigma^{n}_{i=1}l_i(n-l_i)}
 \]
-</div>
+<!-- </div> -->
 <br>
 <br>
 <br>
