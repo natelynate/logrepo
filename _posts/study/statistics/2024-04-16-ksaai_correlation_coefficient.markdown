@@ -5,6 +5,8 @@ date:   2024-04-16 13:15:16 +0900
 categories: study
 tags: statistics dataanalysis
 ---
+<link rel="stylesheet" href="{{ '/assets/styles/styles.css' | relative_url }}">
+
 
 The three most influential correlation coefficients are:
 
@@ -16,7 +18,7 @@ The three most influential correlation coefficients are:
 .
 .
 <h4><b>Pearson’s Correlation Coefficient (r): <b><h4>  
- 
+
 <font color='green'>Type of Data:</font> Quantitative.
 <br>
 <font color='green'>Nature of Association:</font> Linear.  
@@ -27,7 +29,7 @@ The three most influential correlation coefficients are:
 <br>
 <font color='green'>Limitation:</font> Pearson's coefficient only captures linear relationships and can be heavily influenced by outliers.  
 <hr style="border: none; border-top: 1px solid #000;">
-<>
+
 <h4><b>Spearman’s Rank Correlation Coefficient (ρ, rho):<b><h4>   
 <font color='green'>Type of Data:</font> Ordinal or non-normally distributed interval data.  
 <br>
@@ -64,14 +66,15 @@ the relationship is <font color='red'> not monotonic </font>, and <font color='r
 
 The generalized formulas are as follows:
 
-<div id='mathjax' style="font-size: 20px;">
+<div id='mathjax'>
 \[
     \xi(X, Y) = 1 - \frac{3\Sigma^{n-1}_{i-1}|r_{i+1}-r_i}{n^2 - 1}  
 \]
 </div>
 <br>
 <br>
-<div id='mathjax' style="font-size: 20px;">
+
+<div id='mathjax'>
 \[
     \xi(X, Y) = 1 - \frac{n\Sigma^{n-1}_{i-1}|r_{i+1}-r_i}{2\Sigma^{n}_{i=1}l_i(n-l_i)}
 \]

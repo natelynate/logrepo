@@ -1,0 +1,5 @@
+/* Increase font size of mathjax notations. Use id=mathjax for the div container surrounding the local lines*/
+
+.mathjax span {
+    font-size: 20px;
+}
