@@ -40,10 +40,10 @@ permalink: /study/
 {% endfor %}
 </ul>
 
-<h1>Statistics % Data Analysis</h1>
+<h1>Statistics & Data Analysis</h1>
 <ul>
 {% for post in site.categories.study %}
-    {% if "statistics" in post.tags or "dataanalysis" in post.tags %}
+    {% if post.tags contains "dataanalysis" or post.tag contains "statistics" %}
         <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
     {% endif %}
 {% endfor %}

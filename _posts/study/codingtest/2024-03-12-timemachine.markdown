@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  [Baekjun] 타임머신
+title:  "[Baekjun] 타임머신"
 date:   2024-03-12 19:15:16 +0900
 categories: study
 tags: codingtest bellmanford
