@@ -10,7 +10,7 @@ Appearance-Based GazeTracking Task에서 CNN 기반 접근법의 고전인 “Ey
 
 집필진이 공개한 <a href=https://github.com/CSAILVision/GazeCapture>Github Repository</a>에서 관련 모델의 관련 스크립트 파일과 모델의 소스코드 (Caffe/Pytorch)를 모두 제공한다. 하지만 GazeCapture Dataset에서 Pytorch 데이터셋을 구성하고, Metadata를 생성하는 것 이외에는 신규 데이터 입력 등 관련 API가 제공되지 않아서 해당 모델을 AI 서비스에 사용하려면 custom API를 직접 만들어야 한다. 
 
-<h3>모델 간략한 개요<h3>
+<h3>간략한 모델 개요</h3>
 iTracker는 다음과 같은 입력값을 처리한다. 
 
 ![alt text]({{"/assets/images/2024-05-25-iTrackerPorting/model_input.PNG" | relative_url}})  
