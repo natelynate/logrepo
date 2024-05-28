@@ -3,7 +3,7 @@ layout: post
 title:  "Procrustes Algorithm 프로크루스테스 알고리즘"
 date:   2024-03-18 19:15:16 +0900
 categories: projects
-tags: gamcheugi computervision
+tags: computervision
 ---
 
 ### 이론
