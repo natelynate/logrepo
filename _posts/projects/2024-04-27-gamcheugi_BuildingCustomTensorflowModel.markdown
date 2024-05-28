@@ -97,21 +97,22 @@ def create_dataset(face_image_paths, face_binary_paths, gazepoint_paths, batch_s
     return dataset
 ```
 
-<h4>텐서플로우 데이터 로딩 함수<h4>
-tf.Data API에서 tf.Tensor 데이터형을 강제하기 때문에 형변환 문제 때문에 구현하는데 많은 시간이 걸렸다. 
+<h4>텐서플로우 데이터 로딩 함수</h4>
+tf.Data API에서 tf.Tensor 데이터형을 강제하기 때문에 형변환 문제 때문에 구현에 많은 시간이 걸렸다. 
 
 <font color='red'>parse_data()</font>함수는 사전에 불러놓은 데이터 샘플 이름을 기반으로 데이터 객체를 로딩하는 함수이다.   
 <font color='red'>tf_parse_function()</font>은 실제 prefetch나 caching등 로딩 효율을 위한 작업을 적용하는 <font color='red'>tf.py_function()</font>을 batch 단위로 적용하는데 이용되는 일종의 wrapper function이다. 
 tf.py_function은 실제 tf.data.Dataset 객체를 생성하고 configure하는 역할을 한다.
 
-한 문장으로 요약하면:
+한 문장으로 요약하면:  
 tf.py_function을 tf.data.Dataset 객체를 생성하는데, initialization 과정에서 parse_data()를 통해 불러들인 데이터에 자동으로 tf_parse_function을 매핑해준다. 
 tf.data.Dataset은 Parallel reading, Caching, Prefetching 등의 추가 작업을 통해 데이터를 읽는 속도를 높이게 된다. 
 
 해당 Loading function을 적용한 이후, 이전에 약 7시간 걸렸던 학습 작업이 20분 내로 끝났다. 
-
-
-<h4>GazeCapture 데이터셋<h4>
+<br>
+<br>
+<br>
+<h4><b>GazeCapture 데이터셋</b></h4>
 GazeCapture Dataset <a href="https://gazecapture.csail.mit.edu/download.php"></a>은 압축용량이 136GB, 2,445,504개의 프레임으로 이루어져 있다. 
 참고 중인 논문에서는 <b>"알 수 없는 기준으로"</b> 이 중 약 0.65% 정도에 해당되는 15,960개만을 사용하였다. 논문 저자들이 대체 어떤 기준으로 필터링을 했는지는 모르겠지만, 일단은 육안으로 점검해서 너무 흐리게 나오거나, 아예 landmark를 찾을 수 없을 정도로 화면각에서 벗어난 피험자들을 삭제하고, dlib을 적용했을 때 Face에 검출되는 프레임들만 골라서 65,125장의 Dataset subset을 만들었다. 
 
@@ -124,9 +125,10 @@ Unzipping하는 과정에서 런타임 디스크 용량이 부족해서 압축�
 </font>
 
 이왕 데이터셋과 모델 소스코드를 받은 김에(멘탈도 추스를 겸) 자체 모델 개발은 잠깐 보류하고 iTracker 모델 포팅 작업을 해보기로 했다. 
-
-
-<h4> 후기 및 개선사항 <h4>
+<br>
+<br>
+<br>
+<h4><b> 후기 및 개선사항</b></h4>
 
 -> 데이터셋을 더 작은 단위로 나누어서 돌릴 것(1만 장 정도)
 -> 새로 만든 콜백 함수 적용하기 (CustomCallback for Email notification)
