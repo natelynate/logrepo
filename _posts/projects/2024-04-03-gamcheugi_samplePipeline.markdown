@@ -20,7 +20,7 @@ tags: gamcheugi computervision
 
 One-shot구조의 스크립트는 대략 다음과 같이 구조화했다.
 
-![alt text]({{"/assets/images/2024-04-04-samplePipeline/1.png" | relative_url}})
+![alt text]({{"/assets/images/240404-samplePipeLine/1.png" | relative_url}})
 
 각 단계에서 얻어지는 중간 산출물들을 보면 대략 다음과 같은 단계를 거친다. 
 <h3>1</h3>
