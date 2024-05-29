@@ -67,9 +67,9 @@ Error Analysis를 통해 임시로 조치하였다. Orientation==1일 때 원본
 따라서 Intersection over Union을 계산하는 함수를 제작하고, 현재 전체 데이터셋에 다른 calibration 없이 이전에 사용하였던 dlib face detector와 eye cropping algorithm을 적용했을 때 Bounding Box들 간의 평균 IoU를 계산해보았다.
 <br>
 <br>
-`mean Face IoU:  0.7304785684022552`
-`mean leftEye IoU:  0.29717062573401426`
-`mean rightEye IoU:  0.28481355962929844`
+`mean Face IoU:  0.7304785684022552`<br>
+`mean leftEye IoU:  0.29717062573401426`<br>
+`mean rightEye IoU:  0.28481355962929844`<br>
 <br>
 <br>
 즉 Face Patch에 비해 Eye Patch는 훨씬 원본과 차이가 크다. 이는 육안으로 확인해봐도 원본 Eye Patch가 훨씬 더 넓은 영역을 포괄함을 알 수 있어 당연한 결과였다. 
