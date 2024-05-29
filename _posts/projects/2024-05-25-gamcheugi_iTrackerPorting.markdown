@@ -64,14 +64,21 @@ Error Analysis를 통해 임시로 조치하였다. Orientation==1일 때 원본
 
 [해결(진행 중)]
 먼저 Bounding Box가 원본과 구체적으로 "얼마나 유사한가"를 정량적으로 판단할 지표가 있어야 했다. 이 부분은 Intersection over Union을 사용하면 적당할 것 같았다. 
-따라서 Intersection over Union을 계산하는 함수를 제작하고, 현재 전체 데이터셋에 다른 calibration 없이 이전에 사용하였던 dlib face detector와 eye cropping al
+따라서 Intersection over Union을 계산하는 함수를 제작하고, 현재 전체 데이터셋에 다른 calibration 없이 이전에 사용하였던 dlib face detector와 eye cropping algorithm을 적용했을 때 Bounding Box들 간의 평균 IoU를 계산해보았다.
+<br>
+<br>
+`mean Face IoU:  0.7304785684022552`
+`mean leftEye IoU:  0.29717062573401426`
+`mean rightEye IoU:  0.28481355962929844`
+<br>
+<br>
+즉 Face Patch에 비해 Eye Patch는 훨씬 원본과 차이가 크다. 이는 육안으로 확인해봐도 원본 Eye Patch가 훨씬 더 넓은 영역을 포괄함을 알 수 있어 당연한 결과였다. 
 
+![alt text]({{"/assets/images/2024-05-25-iTrackerPorting/bb_comparison.PNG" | relative_url}})  
 
-즉 Face Patch에 비해 Eye Patch는 훨씬 원본과 다르다. 이는 육안으로 확인해봐도 원본 Eye Patch가 훨씬 더 넓은 영역을 포괄함을 알 수 있어 당연한 결과였다. 
-
-![alt text]({{"/assets/images/2024-05-25-iTrackerPorting/facegrid_errors.PNG" | relative_url}})  
-
-대략 다음과 같은 느낌이다. 초록색 Boundingbox가 Dlib, 붉은색이 데이터셋의 json 메타데이터를 열람해서 참조한 Apple Face Detector Bounding box들이다.
+대략 다음과 같은 느낌이다.  
+초록색 Bounding box가 Dlib, 
+붉은색 Bounding box는 데이터셋의 json 메타데이터를 열람해서 참조한 Apple Face Detector Bounding box들이다.
 
 이제 dlib의 예측치를 보정하여 Apple Face Detector의 Cropping 결과물과 동일한 결과를 낼 수 있도록 하는 보정 알고리즘을 만들어야 한다. 
 
